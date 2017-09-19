@@ -3,8 +3,8 @@ import CoreLocation
 
 class Thing: NSObject, CLLocationManagerDelegate {
 
-    func locationManager(_ manager: CLLocationManager, didUpdateTo newLocation: CLLocation, from oldLocation: CLLocation) {
-        print("\(newLocation.coordinate.latitude)\t\(newLocation.coordinate.longitude)")
+    func locationManager(_ manager: CLLocationManager, didUpdateTo location: CLLocation, from _: CLLocation) {
+        print("\(location.coordinate.latitude)\t\(location.coordinate.longitude)")
         CFRunLoopStop(CFRunLoopGetCurrent());
     }
 
