@@ -1,7 +1,7 @@
 .PHONY: clean
 
 whereami:
-	swiftc whereami.swift
+	swiftc -static-stdlib whereami.swift
 
 clean: 
 	rm -f whereami
